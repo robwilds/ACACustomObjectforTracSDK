@@ -28,4 +28,5 @@ STEP 5
 once everything is installed, open the existing project in intelliJ
 
 
+<img width="691" alt="image" src="https://user-images.githubusercontent.com/37511730/194180857-1f1767b1-d47f-4438-abaf-1b852f809bca.png">
 
