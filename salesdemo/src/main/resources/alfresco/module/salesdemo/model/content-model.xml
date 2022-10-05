@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="salesDemo:contentModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <!-- Optional meta-data about the model -->
+    <description>Sales Demo Document Model</description>
+    <author>George Steimer</author>
+    <version>1.0</version>
+
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <!-- Import Alfresco System Model Definitions -->
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+
+        <!-- Import TSG and ACA (previously HPI) model definitions -->
+        <import uri="http://www.tsgrp.com/model/tsg/1.0" prefix="tsg"/>
+        <import uri="http://www.tsgrp.com/model/hpi/1.0" prefix="hpi"/>
+    </imports>
+
+    <!-- Custom namespace for the Sales Demo Scenario -->
+    <namespaces>
+        <namespace uri="http://www.alfresco.org/model/salesDemo/1.0" prefix="salesDemo"/>
+    </namespaces>
+
+    <!-- ===============================================================================================================
+        Constraints, Types, and Aspects go here...
+        -->
+
+    <types>
+        <!--
+            ACME Enterprise-wide Document root type.
+            All other custom document types would extend this one.
+        <type name="acme:document">
+            <title>Sample Document Type</title>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="acme:documentId">
+                    <title>Document Identification Number</title>
+                    <type>d:text</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>acme:securityClassified</aspect>
+            </mandatory-aspects>
+        </type>
+        -->
+        <type name="salesDemo:customerOrder">
+            <title>Customer Order</title>
+            <parent>cm:folder</parent>
+            <archive>false</archive>
+            <properties>
+                <property name="salesDemo:salesperson">
+                    <title>Salesperson</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:orderStatus">
+                    <title>Order Status</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:closeDate">
+                    <title>Close Date</title>
+                    <type>d:date</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>salesDemo:customerInfo</aspect>
+                <aspect>salesDemo:orderInfo</aspect>
+            </mandatory-aspects>
+        </type>
+
+        <type name="salesDemo:orderDocument">
+            <title>Order Document</title>
+            <parent>cm:content</parent>
+            <archive>false</archive>
+            <properties>
+            </properties>
+            <mandatory-aspects>
+                <aspect>salesDemo:customerInfo</aspect>
+                <aspect>salesDemo:orderInfo</aspect>
+                <aspect>hpi:folderTaggable</aspect>
+                <aspect>tsg:renditioned</aspect>
+            </mandatory-aspects>
+        </type>
+
+
+    </types>
+
+
+
+    <!-- Aspects -->
+    <aspects>
+        <aspect name="salesDemo:customerInfo">
+            <title>Customer Information</title>
+            <properties>
+                <property name="salesDemo:customerNumber">
+                    <title>Customer Number</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                
+                <property name="salesDemo:customerName">
+                    <title>Customer Name</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+        
+        <aspect name="salesDemo:orderInfo">
+            <title>Order Info</title>
+            <properties>
+                <property name="salesDemo:orderNumber">
+                    <title>Order Number</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+    
+    </aspects>
+
+
+</model>
