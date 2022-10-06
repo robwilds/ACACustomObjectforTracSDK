@@ -36,7 +36,24 @@ Once project is open, navigate to:  salesdemo>src>main>resources>model.  you wil
 
 STEP 7
 
-After editing the content-model.xml file, compile the jar with the following commands:  mvn clean package from a terminal opened within intelliJ
+After editing the content-model.xml file, oepn terminal within intelliJ
+<img width="460" alt="image" src="https://user-images.githubusercontent.com/37511730/194322714-0a7c4f1a-29c9-4c8a-a1d5-9499f8f74ae1.png">
+
+after opening terminal, navigate into the salesdemo sub folder and compile the jar with the following commands:  mvn clean package.  you should see build success.
+
+STEP 8
+
+now upload the jar to your ACS instance.  the jar is in the salesdemo/target folder.  
+![image](https://user-images.githubusercontent.com/37511730/194324255-7b759e8f-2c71-41ba-9722-d33211ba2ae8.png)
+
+the folder to upload is in the:  data/services/content/custom folder
+<img width="363" alt="image" src="https://user-images.githubusercontent.com/37511730/194324977-ce7384c0-84ae-45c7-ad72-2518a3102412.png">
+
+restart services then login to ACA (as demo or admin) and go to admin>object types and you should see the two types listed in the content-model.xml
+
+create your trac!
+
+
 
 
 
