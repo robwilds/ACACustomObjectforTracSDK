@@ -49,6 +49,9 @@ now upload the jar to your ACS instance.  the jar is in the salesdemo/target fol
 the folder to upload is in the:  data/services/content/custom folder
 <img width="363" alt="image" src="https://user-images.githubusercontent.com/37511730/194324977-ce7384c0-84ae-45c7-ad72-2518a3102412.png">
 
+example transfer command:  scp -i /users/robert.wilds/downloads/awskey/RWpk.pem salesdemo-1.0-SNAPSHOT.jar ec2-user@ec2-3-91-158-74.compute-1.amazonaws.com:/home/ec2-user/adp/data/services/content/custom/
+
+
 restart services then login to ACA (as demo or admin) and go to admin>object types and you should see the two types listed in the content-model.xml
 
 create your trac!
