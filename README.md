@@ -30,3 +30,13 @@ once everything is installed, open the existing project in intelliJ
 
 <img width="691" alt="image" src="https://user-images.githubusercontent.com/37511730/194180857-1f1767b1-d47f-4438-abaf-1b852f809bca.png">
 
+STEP 6
+
+Once project is open, navigate to:  salesdemo>src>main>resources>model.  you will see a content-model.xml file.  this file must be edited to show custom properties and labels in ACA
+
+STEP 7
+
+After editing the content-model.xml file, compile the jar with the following commands:  mvn clean package from a terminal opened within intelliJ
+
+
+
