@@ -51,6 +51,53 @@
             <parent>cm:folder</parent>
             <archive>false</archive>
             <properties>
+                <property name="salesDemo:bodyPart">
+                    <title>bodyPart</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <!--property name="salesDemo:incidentDate">
+                    <title>Incident Date</title>
+                    <type>d:date</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property-->
+                <property name="salesDemo:examiner">
+                    <title>examiner</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <!--property name="salesDemo:castMemberID">
+                    <title>CastMemberID</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property-->
+
+                <!--property name="salesDemo:castMemberName">
+                    <title>CastMemberName</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property-->
+
                 <property name="salesDemo:DisneyDescription">
                     <title>Description</title>
                     <type>d:text</type>
@@ -60,7 +107,7 @@
                         <tokenised>both</tokenised>
                     </index>
                 </property>
-                <property name="salesDemo:DisneyClaimNumber">
+                <!--property name="salesDemo:DisneyClaimNumber">
                     <title>DisneyClaimNumber</title>
                     <type>d:text</type>
                     <index enabled="true">
@@ -68,7 +115,7 @@
                         <stored>false</stored>
                         <tokenised>both</tokenised>
                     </index>
-                </property>
+                </property-->
                 <property name="salesDemo:salesperson">
                     <title>Salesperson</title>
                     <type>d:text</type>
@@ -108,6 +155,51 @@
             <parent>cm:content</parent>
             <archive>false</archive>
             <properties>
+                <property name="salesDemo:docCategory">
+                    <title>Document Category</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:docDate">
+                    <title>Documenet Date</title>
+                    <type>d:date</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:assignedTo">
+                    <title>Assigned To</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:temporaryComments">
+                    <title>Temporary Comments</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:routingTo">
+                    <title>Routing To</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
             </properties>
             <mandatory-aspects>
                 <aspect>salesDemo:customerInfo</aspect>
@@ -116,17 +208,31 @@
                 <aspect>tsg:renditioned</aspect>
             </mandatory-aspects>
         </type>
-
-
     </types>
-
-
 
     <!-- Aspects -->
     <aspects>
         <aspect name="salesDemo:customerInfo">
             <title>Customer Information</title>
             <properties>
+                <property name="salesDemo:incidentDate">
+                    <title>Incident Date</title>
+                    <type>d:date</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:DisneyClaimNumber">
+                    <title>DisneyClaimNumber</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
                 <property name="salesDemo:customerNumber">
                     <title>Customer Number</title>
                     <type>d:text</type>
@@ -136,13 +242,30 @@
                         <tokenised>both</tokenised>
                     </index>
                 </property>
-                
                 <property name="salesDemo:customerName">
                     <title>Customer Name</title>
                     <type>d:text</type>
                     <index enabled="true">
                         <atomic>true</atomic>
                         <stored>false</stored> 
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:castMemberID">
+                    <title>CastMemberID</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+                <property name="salesDemo:castMemberName">
+                    <title>CastMemberName</title>
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
                         <tokenised>both</tokenised>
                     </index>
                 </property>
