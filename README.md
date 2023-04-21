@@ -52,7 +52,7 @@ the folder to upload is in the:  data/services/content/custom folder
 example transfer command:  scp -i /users/robert.wilds/downloads/awskey/RWpk.pem salesdemo-1.0-SNAPSHOT.jar ec2-user@ec2-3-91-158-74.compute-1.amazonaws.com:/home/ec2-user/adp/data/services/content/custom/
 
 
-restart services then login to ACA (as demo or admin) and go to admin>object types and you should see the two types listed in the content-model.xml
+restart services then login to ACA (as demo or admin) and go to admin>object types and you should see the two types listed in the add types dropdown
 
 create your trac!
 
